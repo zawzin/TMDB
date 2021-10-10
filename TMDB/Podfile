@@ -7,8 +7,19 @@ target 'TMDB' do
 
   # Pods for TMDB
 
-  #UI
+#UI
   pod 'PKHUD', '~> 5.0'
-  pod 'Kingfisher', '5.11.0' , :inhibit_warnings => true
+  pod 'Kingfisher', '7.0' , :inhibit_warnings => true
+
+# RxSwift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+# Realm
+  pod 'RealmSwift'
+  pod 'RxRealm'
+  
+# Network
+  pod 'Alamofire', '~> 5.4'
 
 end

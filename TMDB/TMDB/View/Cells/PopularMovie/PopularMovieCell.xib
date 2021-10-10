@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularMovieCell" customModule="TMDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-sp-hof">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ff1-dY-jLM">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9g5-Nn-C8O"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld2-FL-kZ0">
+                                <rect key="frame" x="256" y="8" width="36" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Kk2-0r-rCB"/>
+                                    <constraint firstAttribute="width" constant="36" id="bp6-fb-DTT"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="fav_border"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-kZ-Xjb">
+                                <rect key="frame" x="158" y="150" width="134" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4B-cg-KeH">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Oct 22, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnH-Rw-14u">
+                                        <rect key="frame" x="0.0" y="27.5" width="134" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ff1-dY-jLM" secondAttribute="bottom" id="8OM-lH-SE5"/>
+                            <constraint firstAttribute="bottom" secondItem="Syn-kZ-Xjb" secondAttribute="bottom" constant="8" id="Gu1-gI-oz3"/>
+                            <constraint firstItem="ff1-dY-jLM" firstAttribute="leading" secondItem="5QA-sp-hof" secondAttribute="leading" id="Pcd-Y0-ANV"/>
+                            <constraint firstAttribute="trailing" secondItem="Syn-kZ-Xjb" secondAttribute="trailing" constant="8" id="Qx1-NX-ncU"/>
+                            <constraint firstItem="Syn-kZ-Xjb" firstAttribute="leading" secondItem="ff1-dY-jLM" secondAttribute="trailing" constant="8" id="YmV-bp-lvr"/>
+                            <constraint firstAttribute="trailing" secondItem="ld2-FL-kZ0" secondAttribute="trailing" constant="8" id="cF6-ld-ulC"/>
+                            <constraint firstItem="ld2-FL-kZ0" firstAttribute="top" secondItem="5QA-sp-hof" secondAttribute="top" constant="8" id="sWL-x6-qim"/>
+                            <constraint firstItem="ff1-dY-jLM" firstAttribute="top" secondItem="5QA-sp-hof" secondAttribute="top" id="vcE-qg-7dV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="5QA-sp-hof" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NPE-XA-2EK"/>
+                <constraint firstAttribute="bottom" secondItem="5QA-sp-hof" secondAttribute="bottom" id="RSy-Dt-eKp"/>
+                <constraint firstAttribute="trailing" secondItem="5QA-sp-hof" secondAttribute="trailing" id="ggC-Jq-mLw"/>
+                <constraint firstItem="5QA-sp-hof" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="maG-Xi-shC"/>
+            </constraints>
+            <connections>
+                <outlet property="btnFav" destination="ld2-FL-kZ0" id="w0L-cp-7HW"/>
+                <outlet property="ivMovie" destination="ff1-dY-jLM" id="Ovs-Ro-1A9"/>
+                <outlet property="lblName" destination="T4B-cg-KeH" id="Ss6-N3-oyb"/>
+                <outlet property="lblReleaseDate" destination="dnH-Rw-14u" id="6GF-6v-YSi"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="100"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="fav_border" width="21.5" height="21.5"/>
+        <image name="img_placeholder" width="170.5" height="170.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
