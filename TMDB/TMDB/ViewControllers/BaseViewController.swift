@@ -40,6 +40,7 @@ extension BaseViewController {
     
     func showAlert(title: String? = "", message: String?, actionTitle: String = "Retry", actionCallback: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alertController.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (_) in
             actionCallback?()
         }))
